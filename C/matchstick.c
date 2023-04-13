@@ -30,7 +30,7 @@ while (1) {
 if (matchsticks == 1) {
 
     printf("Itne matches bacche hai: %d\n", matchsticks);
-    printf("Hat bkl har gaya!!/n HAHAHAHAHAHAHAHA");
+    printf("har gaya lmao!!/n HAHAHAHAHAHAHAHA");
     break;
 
 }

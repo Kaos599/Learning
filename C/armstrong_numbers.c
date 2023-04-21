@@ -1,19 +1,36 @@
-
-//Armstrong numbers ka program //
-
 #include <stdio.h>
+#include <math.h>
+              
 
-int main (){
+int isArmstrong(int num) {
+    int sum = 0; 
+    int temp = num; 
+    int order = (int) log10(num) + 1; 
 
-int i = 1, a , b , c;
-printf("Yeh dekh jaadoo:");
-while (i <= 500) {
+    
+    while (temp > 0) {
+        int digit = temp % 10; 
+        sum += (int) pow(digit, order); 
+        temp /= 10; 
+    }
 
-    a = i % 10;
-    b = i % 100;
-    b = (b-a)/10;
-    c = i/100;
+    
+    return (sum == num);
+}
 
-    if ((a*a*a) + (b*b*b) + (c*c*c) == i)
-        printf("%d\n", i);
-        i++;
+
+int main() {
+    int num;
+    printf("Enter a number: ");
+    scanf("%d", &num);
+
+    
+    if (isArmstrong(num)) {
+        printf("%d is an Armstrong number.\n", num);
+    }
+    else {
+        printf("%d is not an Armstrong number.\n", num);
+    }
+
+    return 0;
+}

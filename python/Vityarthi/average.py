@@ -8,7 +8,7 @@ Subject 5: 55
 Sample Output: 77 """
 
 # Answer1: Two methods -
-(a) Subject = [0] * 5 # create a list of zeros 
+Subject = [0] * 5 # create a list of zeros 
 Total_Marks = 0 
 for i in range(5): 
     i += 1 
